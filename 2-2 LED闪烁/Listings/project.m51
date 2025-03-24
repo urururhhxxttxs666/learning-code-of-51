@@ -1,0 +1,93 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    01/09/2025  18:30:03  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+E:\SCM\KEIL_V5\C51\BIN\BL51.EXE .\Objects\mian.obj TO .\Objects\project PRINT (.\Listings\project.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\mian.obj (MIAN)
+  E:\SCM\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\project (MIAN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0016H     UNIT         ?PR?_DELAYXMS?MIAN
+            CODE    0019H     0016H     UNIT         ?PR?MAIN?MIAN
+            CODE    002FH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\project (MIAN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MIAN
+
+?PR?MAIN?MIAN
+  +--> ?PR?_DELAYXMS?MIAN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\project (MIAN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MIAN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:0019H         PUBLIC        main
+  C:0003H         PUBLIC        _Delayxms
+  -------         PROC          _DELAYXMS
+  D:0006H         SYMBOL        x
+  -------         DO            
+  D:0005H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/09/2025  18:30:03  PAGE 2
+
+
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0003H         LINE#         4
+  C:0003H         LINE#         5
+  C:0003H         LINE#         7
+  C:000DH         LINE#         8
+  C:000EH         LINE#         9
+  C:0010H         LINE#         10
+  C:0012H         LINE#         12
+  C:0012H         LINE#         13
+  C:0014H         LINE#         14
+  C:0016H         LINE#         15
+  C:0018H         LINE#         16
+  -------         ENDPROC       _DELAYXMS
+  -------         PROC          MAIN
+  C:0019H         LINE#         22
+  C:0019H         LINE#         23
+  C:0019H         LINE#         24
+  C:0019H         LINE#         25
+  C:0019H         LINE#         26
+  C:001CH         LINE#         27
+  C:0023H         LINE#         28
+  C:0026H         LINE#         29
+  C:002DH         LINE#         46
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MIAN
+
+Program Size: data=9.0 xdata=0 code=59
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
